@@ -15,27 +15,26 @@
 @font-weight-bold: 600;
 
 
-@primay-color:                  #607d8b;
-@primay-color-dark:             #455a64;
-@primay-color-light:            #b0bec5;
-@accent-color:                  #03a9f4;
-//@accent-color-fallback:         #f50057;
+@primary-color:                  #4CAF50;//500
+@primary-color-dark:             #388E3C;//700
+@primary-color-light:            #A5D6A7;//200
+@accent-color:                   #03a9f4;
 
 @gray-divider:                  rgba(0,0,0,.12);
 @gray-subtitle:                 rgba(0,0,0,.54);
 @gray-text:                     rgba(0,0,0,.87);
 
 
-@brand-primary: @primay-color;
+@brand-primary: @primary-color;
 
 @zindex-sub-navbar:            900;
 
 @headings-font-weight: @font-weight-regular;
 
 
-@btn-default-color:              @primay-color-light;
-@btn-default-bg:                 @primay-color-dark;
-@btn-default-border:             @primay-color-dark;
+@btn-default-color:              @primary-color-light;
+@btn-default-bg:                 @primary-color-dark;
+@btn-default-border:             @primary-color-dark;
 
 
 
@@ -45,23 +44,21 @@
   padding: 0;
 }
 
-
 //general stuff ==================================================================
 
 body{
   margin-top: 60px;
-  font-weight: 300;
+  font-weight: @font-weight-light;
   color: @gray-text;
 }
 
-p.alt{
+.alt{
   color: @gray-subtitle;
-  // @primay-color;
-}
+ }
 
 
 .section-header{
-  color: @primay-color;
+  color: @primary-color;
   text-transform: uppercase;
   font-weight: @font-weight-light;
   border-bottom: 1px solid @gray-divider;
@@ -78,7 +75,6 @@ strong{
 section{
   padding: 30px 0;
 }
-
 
 footer{
   padding: 60px 0;
@@ -101,27 +97,27 @@ footer{
 
 // Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      @primay-color-light;
-@navbar-inverse-bg:                         @primay-color;
+@navbar-inverse-color:                      @primary-color-light;
+@navbar-inverse-bg:                         @primary-color;
 @navbar-inverse-border:                     none;
                                             //darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 @primay-color-light;
+@navbar-inverse-link-color:                 @primary-color-light;
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          #fff;
-@navbar-inverse-link-active-bg:             @primay-color-dark;
+@navbar-inverse-link-active-bg:             @primary-color-dark;
 
 // Inverted navbar brand label
-@navbar-inverse-brand-color:                @primay-color-light;
+@navbar-inverse-brand-color:                @primary-color-light;
 @navbar-inverse-brand-hover-color:          #fff;
 @navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            @primay-color;
-@navbar-inverse-toggle-icon-bar-bg:         @primay-color-dark;
-@navbar-inverse-toggle-border-color:        @primay-color-dark;
+@navbar-inverse-toggle-hover-bg:            @primary-color;
+@navbar-inverse-toggle-icon-bar-bg:         @primary-color-dark;
+@navbar-inverse-toggle-border-color:        @primary-color-dark;
 
 
 .navbar {
@@ -135,7 +131,7 @@ footer{
   font-weight: @font-weight-bold;         
   i{
     visibility: hidden;
-    color:  @primay-color-light;
+    color:  @primary-color-light;
   }
   
   &:hover{
@@ -149,75 +145,6 @@ footer{
 }
 
 
-
-//header ==================================================================
-
-/*
-header{
-  font-weight: 400;
-  background: @primay-color;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: @zindex-navbar;
-  box-shadow: 0 0 4px rgba(0,0,0,.3);
-  h1{
-    font-size: @font-size-base;
-    text-align: center;
-    .reset;
-    margin-right: 10px;
-    @media (min-width: @screen-sm-min) {
-     float: left;
-    }
-      a{
-        color: #fff;
-        display: block;
-        line-height: 60px;
-        
-        i{
-          visibility: hidden;
-          color:  @primay-color-light;
-        }
-        
-        &:hover{
-          color: #fff;
-          text-decoration: none;
-          i{
-            visibility: visible;
-          }//i
-        }//hover
-      }//a
-    }//h1
-
-
-//nav bar -------
-  nav{
-    ul{
-      list-style: none;
-      .reset;
-      }
-    li{
-      float: left;
-      a{
-        display: block;
-        line-height: 60px;
-        padding: 0 20px;
-        color: @primay-color-light;
-        
-        &:hover{
-          color: #fff;
-          background: @primay-color-dark;
-          text-decoration: none;
-          }//hover
-        
-        }//a
-      }//li    
-  }//nav
-}// header
-
-*/
-
-
 //Main Banner ==================================================================
 
 
@@ -229,7 +156,7 @@ header{
     float: right;
     i{
       font-size: 1300%;
-      color: @primay-color-light;
+      color: @primary-color-light;
       margin-left: 20px;
       &.larger{
         font-size: 2000%;
@@ -258,12 +185,13 @@ header{
 
 .aditional-actions{
 //  padding: 0;
-  background: @primay-color-dark;
-  color: @primay-color-light;
+  background: @primary-color-dark;
+  color: @primary-color-light;
   z-index: @zindex-sub-navbar;
   box-shadow: 0 2px 2px rgba(0,0,0,.2);
   padding: 6px 0!important;
-  position: sticky; top: 60px;
+  position: sticky; 
+  top: 60px;
 
   form{
     float: right;
@@ -277,7 +205,7 @@ header{
   a{
     padding: 7px 0 6px 0;
     display: inline-block;
-    color: @primay-color-light;  
+    color: @primary-color-light;  
     text-transform: uppercase;
     font-size:  @font-size-small;
     &:hover{
@@ -297,7 +225,7 @@ header{
     margin-bottom: 30px;
   }
     h4{
-      color: @primay-color-dark;
+      color: @primary-color-dark;
       font-weight: @font-weight-light;
       strong{
         font-weight: @font-weight-bold;
@@ -328,7 +256,7 @@ header{
 .feature{
   .large-icon{
     font-size: 800%;
-    color: @primay-color;
+    color: @primary-color;
   }
   h3{
     margin-top: 0;
@@ -342,15 +270,15 @@ header{
 
 
 .docs{
-  .col-md-6  {
+  .col-md-6{
     margin-bottom: 30px;
   }
 }
 
 .sidebar{
-    @media (min-width: @screen-md-min) {
-      position: sticky; top: 130px;
-      }
+  @media (min-width: @screen-md-min) {
+    position: sticky; top: 130px;
+    }
 }
 
 .submenu{
@@ -360,7 +288,7 @@ header{
     text-transform: uppercase;
     font-weight: @font-weight-light;
     a{
-      color: @primay-color-light;
+      color: @primary-color-light;
       display: block;
     } //a
     &.active a{
@@ -390,7 +318,7 @@ header{
     .menu-title>a{
 //      background: blue;
       font-weight: @font-weight-bold;
-      color: @primay-color-dark;
+      color: @primary-color-dark;
     }
     
     ul{
@@ -404,8 +332,8 @@ header{
 //Footer ==================================================================
 
 footer{
-  background: @primay-color-dark;
-  color: @primay-color-light;
+  background: @primary-color-dark;
+  color: @primary-color-light;
   a{
     &:hover{
       color: #fff;
@@ -419,5 +347,5 @@ footer{
 //logo ==================================================================
 
 .redhat{
- background: #000; 
+  background: #000; 
 }
