@@ -18,6 +18,8 @@
     <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-fa fa-144x144-precomposed.png">
 
   </head>
+  
+  
   <body class="homepage">    
     
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -37,21 +39,20 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
-            <li><a href="start.html">Getting started</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="start.html">Get started</a></li>
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentation <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Docs <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="docs_home.html">Documentation Home</a></li>
-                <li><a href="docs_android.html">Android Documentation</a></li>
-                <li><a href="#">iOS Documentation</a></li>
-                <li><a href="#">Hybrid Documentation</a></li>
-                <li><a href="#">Server Documentation</a></li>
+                <li><a href="docs_home.html">Documentation</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="roadmap.html">Road Map</a></li>
+                <li><a href="demos.html">Demos</a></li>
               </ul>
             </li>
             
-            <li><a href="community.html">Get Involved</a></li>
+            <li><a href="community.html">Community</a></li>
             
           </ul>
 
@@ -64,27 +65,25 @@
 
       <div class="container">
       
-        <div class="illus">
-          <i class="fa fa-mobile larger hidden-sm hidden-xs"></i>
-          <i class="fa fa-mobile large hidden-xs"></i>
-          <i class="fa fa-mobile hidden-sm hidden-xs"></i>
-        </div>
-        
-        <h2>Mobile development made easy.</h2>
-        <p>This is just a wireframe, still to decide what to put in this space. <strong>View it on FireFox</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullariatur. Eanim id est laborum.</p>
-        
-        <p>
-          <button type="button" class="btn btn-default btn-lg">Get started now</button>
-        </p>
+                
+            <h2 class="fade-in-up one">Mobile development begins here</h2>
+         
+            <p class="fade-in two"><strong>We make cross-platform enterprise mobile development easy</strong>. Aerogear provides a set of flexible and extensible libraries, as well as server side components, to simplify mobile development across platforms and common repetitive infrastructure tasks.</p>
+         
+            <div class="main-action fade-in three">
+              <a href="start.html" class="btn btn-inverse btn-lg">Get started now</a>
+              <p>version 1.1.2</p>
+            </div><!-- main action -->
+         
+         <a class="see-more"><i class="fa fa-chevron-circle-down fa-3x"></i></a>
         
       </div><!-- container -->
     </section> <!-- main banner -->
  
  
 
-    <section class="aditional-actions">
+    <section class="aditional-actions fixedsticky">
       <div class="container">
-
  
        <form class="form-inline" role="form">
         <div class="form-group">
@@ -106,25 +105,28 @@
     <section class="main-features">
       <div class="container">
       
-        <h1 class="section-header">AeroGears Solutions</h1>
+      
+        <h1 class="section-header">AeroGears Features</h1>
 
-        <div class="row">        
-          <div class="col-md-6">
-            <h4><i class="fa fa-rocket"></i> AeroGear<strong>Core</strong></h4>
+
+        <div class="row">    
+            
+          <div class="col-md-6 core">
+            <h3><i class="fa fa-rocket"></i> AeroGear<strong>Core</strong></h3>
             <p class="alt">Crossplatform APIs for all your common client-server infrastructure tasks.</p>
             <p><strong>DataStores</strong>, <strong>Pipes</strong>, <strong>Authentication</strong>, <strong>Authorisation</strong> and <strong>Pagination</strong> APIs cover the bases for day-to-day cross-platform development.</p>
             
-            <p><button type="button" class="btn btn-primary btn-sm">Learn about AeroGearCore</button></p>
+            <p><a href="features.html#core" class="btn btn-primary">Learn about AeroGear<strong>Core</strong></a></p>
             
           </div><!-- col -->
           
         
-          <div class="col-md-6">
-            <h4><i class="fa fa-paper-plane"></i> AeroGear<strong>Push</strong></h4>
+          <div class="col-md-6 push">
+            <h3><i class="fa fa-paper-plane"></i> AeroGear<strong>Push</strong></h3>
             <p class="alt">Send push notifications to any divide, regardless of platform or network.</p>
             <p>A unified APU lets you send push notifications from the <strong>Unified Push Server</strong> via  <strong>Google Cloud Messaging</strong>, <strong>Apple’s APNs</strong> or <strong>SimplePush</strong> to any mobile divide.</p>
             
-            <p><button type="button" class="btn btn-primary btn-sm">Learn about AeroGearPush</button></p>
+            <p><a href="features.html#push" class="btn btn-primary">Learn about AeroGear<strong>Push</strong></a></p>
             
           </div><!-- col -->
         </div><!-- row -->
@@ -132,28 +134,89 @@
 
         <div class="row">
 
-          <div class="col-md-6">
-            <h4><i class="fa fa-shield"></i> AeroGear<strong>Security</strong></h4>
+          <div class="col-md-6 security">
+            <h3><i class="fa fa-shield"></i> AeroGear<strong>Security</strong></h3>
             <p class="alt">Integrate with your existing security and authentication infrastructure.</p>
             <p>A small set of classes to provide integration with security providers written in Java, like <strong>PicketLink</strong> and <strong>Apache Shiro</strong>.</p>
-            <p><button type="button" class="btn btn-primary btn-sm">Learn about AeroGearSecurity</button></p>
+            <p><a href="features.html#security" class="btn btn-primary">Learn about AeroGear<strong>Security</strong></a></p>
           </div><!-- col -->
 
 
-          <div class="col-md-6">
-            <h4><i class="fa fa-refresh"></i> AeroGear<strong>Sync</strong></h4>
+          <div class="col-md-6 sync">
+            <h3><i class="fa fa-refresh"></i> AeroGear<strong>Sync</strong></h3>
             <p class="alt">Sync things, some text goes here.</p>
             <p>More text goes here about aerogear sync. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu.</p>
-            <p><button type="button" class="btn btn-primary btn-sm">Learn about AeroGearSecurity</button></p>
+            <p><a href="features.html#syng"class="btn btn-primary">Learn about AeroGear<strong>Sync</strong></a></p>
           </div><!-- col -->
 
 
         </div><!-- row -->
       </div><!-- container -->
+    </section><!--main features-->
+
+
+
+
+    <section class="clients">
+      <div class="container">
+      
+        <h1 class="section-header">AeroGear is crossplatform</h1>
+
+        <div class="row">        
+          <div class="col-md-4 col-sm-4">
+            <div class="well android">
+              <h4><i class="fa fa-android"></i>Android</h4>
+              <p>
+                <a href="start.html#android" class="btn btn-inverse btn-sm"><strong>Android</strong>AeroGear</a>
+              </p>
+            </div><!-- well-->
+            
+          </div><!-- col -->
+          
+          
+          <div class="col-md-4 col-sm-4">
+            <div class="well ios">
+             <h4><i class="fa fa-apple"></i>iOS</h4>
+             <p>
+               <a href="start.html#ios" class="btn btn-inverse btn-sm"><strong>iOS</strong>AeroGear</a>
+             </p>
+            </div><!-- well -->
+          </div><!-- col -->
+
+
+          <div class="col-md-4 col-sm-4">
+            <div class="well windows">
+             <h4><i class="fa fa-windows"></i>Windows</h4>
+             <p>
+               <a href="start.html#windows" class="btn btn-inverse btn-sm"><strong>Windows</strong>AeroGear</a>
+             </p>
+            </div><!-- well -->
+          </div><!-- col -->
+
+          
+          <div class="col-md-6 col-sm-6">
+            <div class="well cordova">
+              <h4><i class="fa fa-stop"></i>Cordova</h4>
+              <p>
+                <a href="start.html#cordova" class="btn btn-inverse btn-sm"><strong>Cordova</strong>AeroGear</a>
+              </p>
+            </div><!-- well -->
+          </div><!-- col -->
+          
+          <div class="col-md-6 col-sm-6">
+            <div class="well webjs">
+             <h4><i class="fa fa-html5"></i>Web/Js</h4>
+             <p>
+               <a href="start.html#webjs" class="btn btn-inverse btn-sm"><strong>Web/Js</strong>AeroGear</a>
+             </p>
+            </div><!-- well -->
+          </div><!-- col -->
+
+
+
+        </div><!-- row -->
+      </div><!-- container -->
     </section> 
-
-
-
 
 
     <section class="custommers">
@@ -182,7 +245,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <h5>SOLUTIONS</h5>
+            <h5>Features</h5>
             <ul class="list-unstyled">
              <li><a href="#">AeroGear Core</a></li>
              <li><a href="#">AeroGear Push</a></li>
@@ -197,7 +260,7 @@
               <li><a href="#">Server</a></li>
               <li><a href="#">Android</a></li>
               <li><a href="#">iOS</a></li>
-              <li><a href="#">Hybrid</a></li>
+              <li><a href="#">Cordova</a></li>
             </ul>
           </div><!-- col -->
           
@@ -249,11 +312,18 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed  -->  
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-
   <!-- My script -->
   <script src="js/script.js"></script>
 
 
+
+<script src="bower_components/filament-fixed/fixedfixed.js"></script>
+
+<script src="bower_components/filament-sticky/fixedsticky.js"></script>
+  
+  <script>
+		$('.aditional-actions').fixedsticky();
+		</script>
 	
 	</body>
 </html>

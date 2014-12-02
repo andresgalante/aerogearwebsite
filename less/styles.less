@@ -7,34 +7,128 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 
 // Font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800);
 @font-family-sans-serif: 'Open Sans', sans-serif;
 
 @font-weight-light: 300;
 @font-weight-regular: 400;
 @font-weight-bold: 600;
+@font-weight-xbold: 800;
 
 
-@primary-color:                  #4CAF50;//500
-@primary-color-dark:             #388E3C;//700
-@primary-color-light:            #A5D6A7;//200
-@accent-color:                   #03a9f4;
+@primary-color:                 #607D8B;//500
+@primary-color-dark:            #455A64;//700
+@primary-color-light:           #B0BEC5;//100
+@accent-color:                  @primary-color-light;
 
-@gray-divider:                  rgba(0,0,0,.12);
-@gray-subtitle:                 rgba(0,0,0,.54);
-@gray-text:                     rgba(0,0,0,.87);
+@gray-divider:                  rgba(0,0,0,.12);//12
+@gray-subtitle:                 rgba(0,0,0,.45);//54
+@gray-text:                     rgba(0,0,0,.75);//87
+
+@white-divider:                 rgba(255,255,255,.12);
+@white-subtitle:                rgba(255,255,255,.70);
+@white-text:                    rgba(255,255,255,1);
+
+
+@feature-core-color:            #9C27B0;//500 purple 
+@feature-push-color:            #2196F3;//500 blue
+@feature-security-color:        #4CAF50;//500 green
+@feature-sync-color:            #FF5722;//500 orange
+
+@platform-android-color:          #a5c63b;//gray
+@platform-ios-color:              #8e8e93;//yellow
+@platform-cordova-color:          #2e3c49;//gray
+@platform-webjs-color:            #e54d26;//orange
+@platform-windows-color:          #20bdf0;//light blue
 
 
 @brand-primary: @primary-color;
 
 @zindex-sub-navbar:            900;
 
-@headings-font-weight: @font-weight-regular;
+@headings-font-weight: @font-weight-bold;
 
 
+@btn-font-weight:                @font-weight-regular;
+ 
 @btn-default-color:              @primary-color-light;
-@btn-default-bg:                 @primary-color-dark;
+@btn-default-bg:                 transparent;
 @btn-default-border:             @primary-color-dark;
+
+@btn-primary-color:              @primary-color-dark;
+@btn-primary-bg:                 transparent;
+@btn-primary-border:             @primary-color-dark;
+
+@btn-core-color:                 @feature-core-color;
+@btn-core-bg:                    transparent;
+@btn-core-border:                @feature-core-color;
+
+@btn-push-color:                 @feature-push-color;
+@btn-push-bg:                    transparent;
+@btn-push-border:                @feature-push-color;
+
+@btn-security-color:             @feature-security-color;
+@btn-security-bg:                transparent;
+@btn-security-border:            @feature-security-color;
+
+@btn-sync-color:                 @feature-sync-color;
+@btn-sync-bg:                    transparent;
+@btn-sync-border:                @feature-sync-color;
+
+
+@btn-inverse-color:              @white-subtitle;
+@btn-inverse-bg:                 transparent;
+@btn-inverse-border:             @white-subtitle;
+
+
+.btn-inverse {
+  .button-variant(@btn-inverse-color; @btn-inverse-bg; @btn-inverse-border);
+  &:hover{
+    background-color: @btn-inverse-color;
+    color: @gray-text;
+  }
+}
+
+
+
+.btn-core {
+  .button-variant(@btn-core-color; @btn-core-bg; @btn-core-border);
+  &:hover{
+    background-color: @btn-core-color;
+    color: #fff;
+  }
+}
+
+.btn-push {
+  .button-variant(@btn-push-color; @btn-push-bg; @btn-push-border);
+  &:hover{
+    background-color: @btn-push-color;
+    color: #fff;
+  }
+}
+
+.btn-security {
+  .button-variant(@btn-security-color; @btn-security-bg; @btn-security-border);
+  &:hover{
+    background-color: @btn-security-color;
+    color: #fff;
+  }
+}
+
+.btn-sync {
+  .button-variant(@btn-sync-color; @btn-sync-bg; @btn-sync-border);
+  &:hover{
+    background-color: @btn-sync-color;
+    color: #fff;
+  }
+}
+
+.btn-primary {
+  &:hover{
+    background-color: @primary-color-dark;
+    color: #fff;
+  }
+}
 
 
 
@@ -44,28 +138,45 @@
   padding: 0;
 }
 
+.sticky{
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+}
+
 //general stuff ==================================================================
 
+
+
 body{
-  margin-top: 60px;
-  font-weight: @font-weight-light;
+  margin-top: 50px;
+  font-weight: @font-weight-regular;
   color: @gray-text;
+//  background: #f1f1f1;
 }
+
+
+//animates links
+a,button{
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  &:hover{
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+  }//hover
+}//a
+
 
 .alt{
   color: @gray-subtitle;
- }
-
-
-.section-header{
-  color: @primary-color;
-  text-transform: uppercase;
   font-weight: @font-weight-light;
-  border-bottom: 1px solid @gray-divider;
-  margin-bottom: 20px;
-  padding-bottom: 5px;
-  margin-top: 0;
-}
+ }
 
 
 strong{
@@ -89,16 +200,35 @@ footer{
 }
 
 
+
+// section header
+.section-header{
+//  text-transform: uppercase;
+  font-weight: @font-weight-light;
+ // border-bottom: 1px solid @gray-divider;
+  margin-bottom: 20px;
+//  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.section-inverse{
+  color: #fff;
+  .alt{color: @white-subtitle;}
+  .section-header{  border-bottom: 1px solid @white-divider;}
+}
+
+
 //NavBar ==================================================================
 
 
+
 // Basics of a navbar
-@navbar-height:                    60px;
+//@navbar-height:                    60px;
 
 // Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      @primary-color-light;
-@navbar-inverse-bg:                         @primary-color;
+@navbar-inverse-bg:                         @primary-color-dark;
 @navbar-inverse-border:                     none;
                                             //darken(@navbar-inverse-bg, 10%);
 
@@ -107,7 +237,7 @@ footer{
 @navbar-inverse-link-hover-color:           #fff;
 @navbar-inverse-link-hover-bg:              transparent;
 @navbar-inverse-link-active-color:          #fff;
-@navbar-inverse-link-active-bg:             @primary-color-dark;
+@navbar-inverse-link-active-bg:             transparent;
 
 // Inverted navbar brand label
 @navbar-inverse-brand-color:                @primary-color-light;
@@ -116,13 +246,21 @@ footer{
 
 // Inverted navbar toggle
 @navbar-inverse-toggle-hover-bg:            @primary-color;
-@navbar-inverse-toggle-icon-bar-bg:         @primary-color-dark;
+@navbar-inverse-toggle-icon-bar-bg:         @primary-color-light;
 @navbar-inverse-toggle-border-color:        @primary-color-dark;
 
 
 .navbar {
   border: none; 
-  box-shadow: 0 0 4px rgba(0,0,0,.3);
+//  box-shadow: 0 0 4px rgba(0,0,0,.3);
+
+  .nav>li>a:hover{
+    box-shadow: inset 0 4px 0px @white-divider;
+    }
+
+  .active{
+    box-shadow: inset 0 4px 0px @accent-color;
+    }
 }
 
 
@@ -137,6 +275,7 @@ footer{
   &:hover{
     color: #fff;
     text-decoration: none;
+
     i{
       visibility: visible;
     }//i
@@ -149,33 +288,73 @@ footer{
 
 
 .main-banner{
-  background: @brand-primary;
+  background: @primary-color;
+  #gradient > .vertical(@primary-color-dark; @primary-color);
   color: #fff;
-
-  .illus{
-    float: right;
-    i{
-      font-size: 1300%;
-      color: @primary-color-light;
-      margin-left: 20px;
-      &.larger{
-        font-size: 2000%;
-      }
-      &.large{
-        font-size: 1600%;
-      }
-    }
+  position: relative;
+  .homepage &{
+    text-align: center;
   }
   
+
+  img{
+    width: 100px;  
+  } 
+
+
+  .bg{
+    background-image: url(../imgs/bg_header.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+   
   h2{
+    margin: 0;
     margin-bottom: 20px;
     text-transform: uppercase;
+    font-size: floor((@font-size-base * 3));
+    font-weight: @font-weight-bold;
+    small{
+      font-weight: @font-weight-light;
+      color: @white-subtitle;
+      text-transform: none;
+    }
   }
   p{
     font-size: @font-size-large;
     line-height: 1.8;
     margin-bottom: 20px;
+    .homepage &{
+      padding: 0 100px;
+      }
     }
+    
+  .see-more{
+    color: @white-divider;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: block;
+  } 
+  
+  .main-action{
+//    background: red;
+    margin-top: 30px;
+    p{
+      font-size: (@font-size-base * .85);
+      margin: 5px 0 0 0;
+    }
+  }
+
+  button{
+//      box-shadow: 0 2px 3px rgba(0,0,0,.2);
+  border: 1px solid @primary-color-light;
+  background: transparent;
+  }
+  
 }
 
 
@@ -184,14 +363,13 @@ footer{
 
 
 .aditional-actions{
-//  padding: 0;
-  background: @primary-color-dark;
+  background: @primary-color;
   color: @primary-color-light;
   z-index: @zindex-sub-navbar;
   box-shadow: 0 2px 2px rgba(0,0,0,.2);
   padding: 6px 0!important;
-  position: sticky; 
-  top: 60px;
+  .sticky;
+  top: 50px;
 
   form{
     float: right;
@@ -224,7 +402,7 @@ footer{
   .row>.col-md-6{
     margin-bottom: 30px;
   }
-    h4{
+    h3{
       color: @primary-color-dark;
       font-weight: @font-weight-light;
       strong{
@@ -237,12 +415,64 @@ footer{
 
 }//.main-features
 
+//
+//.core{
+//  h3{
+//    color: @feature-core-color;
+//  }
+//}
+//
+//
+//.push{
+//  h3{
+//    color: @feature-push-color;
+//  }
+//}
+//
+//
+//.security{
+//  h3{
+//    color: @feature-security-color;
+//  }
+//}
+//
+//
+//.sync{
+//  h3{
+//    color: @feature-sync-color;
+//  }
+//}
+//
 
+//clientss ==================================================================
+
+
+.clients{
+//  background: @gray-lighter;
+  border-top: 1px solid @gray-divider;
+  .well{
+    text-align: center;
+    color: #fff;
+  }
+  
+  .ios{         background: @platform-ios-color;}
+  .android{     background: @platform-android-color;}
+  .cordova{     background: @platform-cordova-color;}
+  .webjs{       background: @platform-webjs-color;}
+  .windows{     background: @platform-windows-color;}
+  
+  .btn{.btn-block;}
+  i{
+    display: block;
+    font-size: 450%;
+    margin-bottom: 10px;
+  }
+}
 
 //custommers ==================================================================
 
 .custommers{
-  background: @gray-lighter;
+  background:lighten(@primary-color-light,10%);
   img{
     margin-bottom: 5px;
   }
@@ -256,7 +486,7 @@ footer{
 .feature{
   .large-icon{
     font-size: 800%;
-    color: @primary-color;
+    color: @primary-color-dark;
   }
   h3{
     margin-top: 0;
@@ -275,24 +505,38 @@ footer{
   }
 }
 
+article{
+  margin-bottom: 30px ;
+  padding-bottom: 30px;
+  border-bottom: 1px solid @gray-divider;
+  &:last-child{
+    border: none;
+  }
+  h4{
+    margin: 30px 0 20px 0;
+  }
+}
+
 .sidebar{
   @media (min-width: @screen-md-min) {
-    position: sticky; top: 130px;
+    .sticky;
+    top: 130px;
     }
 }
 
 .submenu{
+border-right: 1px solid @gray-divider;
 
 //main titles
   h5{
     text-transform: uppercase;
     font-weight: @font-weight-light;
     a{
-      color: @primary-color-light;
+//      color: @primary-color-light;
       display: block;
     } //a
     &.active a{
-     color: @accent-color;
+     font-weight: @font-weight-bold;
     }
 
   }//h6
@@ -334,7 +578,11 @@ footer{
 footer{
   background: @primary-color-dark;
   color: @primary-color-light;
+  h5{
+    text-transform: uppercase;
+  }
   a{
+    color: @white-subtitle;
     &:hover{
       color: #fff;
       text-decoration: none;
@@ -347,5 +595,153 @@ footer{
 //logo ==================================================================
 
 .redhat{
-  background: #000; 
+//  background: #000; 
+  background: darken(@primary-color-dark, 10%);
+  padding: 60px 0;
 }
+
+
+
+
+//Animation ==================================================================
+
+
+
+/* make keyframes that tell the start state and the end state of our object */
+
+//FADEIN UP
+@-webkit-keyframes fadeInUpWebkit { 
+  from  {     opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }//from 
+  to    {     opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+        }//to
+ 
+ }//webkit
+
+
+@-moz-keyframes fadeInUpMoz {
+  from  {     opacity: 0;
+       -moz-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }//from 
+  to    {     opacity: 1;
+       -moz-transform: none;
+            transform: none;
+        }//to
+  }//moz
+
+@keyframes fadeInUp {
+  from  {     opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }//from 
+  to    {     opacity: 1;
+            transform: none;
+        }//to
+ }
+
+
+
+//FADEIN
+
+@-webkit-keyframes fadeIn { 
+  from  {     opacity: 0;
+        }//from 
+  to    {     opacity: 1;
+        }//to
+ 
+ }//webkit
+
+
+@-moz-keyframes fadeIn {
+  from  {     opacity: 0;
+        }//from 
+  to    {     opacity: 1;
+        }//to
+  }//moz
+
+@keyframes fadeIn {
+  from  {     opacity: 0;
+        }//from 
+  to    {     opacity: 1;
+        }//to
+ }
+
+
+
+
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+
+  &.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  }
+  
+  &.two {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay:1.4s;
+  animation-delay: 1.4s;
+  }
+  
+  &.three {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+  }
+  
+}  
+
+
+
+.fade-in-up {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeInUpWebkit ease 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeInUpMoz ease-in 1;
+	animation:fadeInUp ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+
+  &.one {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  }
+  
+  &.two {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay:1s;
+  animation-delay: 1s;
+  }
+  
+  &.three {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+  }
+  
+}  
+
+
