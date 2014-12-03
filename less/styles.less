@@ -149,7 +149,6 @@
 //general stuff ==================================================================
 
 
-
 body{
   margin-top: 50px;
   font-weight: @font-weight-regular;
@@ -194,7 +193,7 @@ footer{
 @media (min-width: @screen-md-min) {
   .homepage{
     section{
-      padding: 80px 0;
+      padding: 60px 0;
     }
   }
 }
@@ -204,8 +203,9 @@ footer{
 // section header
 .section-header{
 //  text-transform: uppercase;
-  font-weight: @font-weight-light;
+//  font-weight: @font-weight-bold;
  // border-bottom: 1px solid @gray-divider;
+  color: @primary-color-dark;
   margin-bottom: 20px;
 //  padding-bottom: 5px;
   margin-top: 0;
@@ -315,11 +315,19 @@ footer{
     text-transform: uppercase;
     font-size: floor((@font-size-base * 3));
     font-weight: @font-weight-bold;
+   
+   
     small{
       font-weight: @font-weight-light;
       color: @white-subtitle;
       text-transform: none;
+      display: none;
+      @media (min-width: @screen-md-min) {
+        display: inline;
+      }
+      
     }
+    
   }
   p{
     font-size: @font-size-large;
@@ -415,34 +423,34 @@ footer{
 
 }//.main-features
 
-//
-//.core{
-//  h3{
-//    color: @feature-core-color;
-//  }
-//}
-//
-//
-//.push{
-//  h3{
-//    color: @feature-push-color;
-//  }
-//}
-//
-//
-//.security{
-//  h3{
-//    color: @feature-security-color;
-//  }
-//}
-//
-//
-//.sync{
-//  h3{
-//    color: @feature-sync-color;
-//  }
-//}
-//
+
+// .core{
+//   h3,i{
+//     color: @feature-core-color;
+//   }
+// }
+// 
+// 
+// .push{
+//   h3,i{
+//     color: @feature-push-color;
+//   }
+// }
+// 
+// 
+// .security{
+//   h3,i{
+//     color: @feature-security-color;
+//   }
+// }
+// 
+// 
+// .sync{
+//   h3,i{
+//     color: @feature-sync-color;
+//   }
+// }
+
 
 //clientss ==================================================================
 
@@ -486,13 +494,16 @@ footer{
 .feature{
   .large-icon{
     font-size: 800%;
-    color: @primary-color-dark;
+//    color: @primary-color-dark;
   }
   h3{
     margin-top: 0;
   }
 //  background: red;
-  margin-bottom: 80px;
+  margin: 0 0 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid @gray-divider;
+  &:last-child{border: none;}
   
 }
 
@@ -520,13 +531,14 @@ article{
 .sidebar{
   @media (min-width: @screen-md-min) {
     .sticky;
-    top: 130px;
+    top: 120px;
     }
 }
 
 .submenu{
 border-right: 1px solid @gray-divider;
-
+//  background: red;
+height: 100%;
 //main titles
   h5{
     text-transform: uppercase;
@@ -548,14 +560,15 @@ border-right: 1px solid @gray-divider;
     
     a{
       display: block;
-      padding: 5px 0;
+      padding: 5px 0 5px 8px;
       border-right: 2px solid #fff;
     }
     
     li{
     &.active>a{
-        border-right: 2px solid @accent-color;
-        color: @accent-color
+        border-right: 2px solid @primary-color;
+        background: @gray-lighter;
+//        color: @accent-color
       }
     }
     
@@ -571,6 +584,35 @@ border-right: 1px solid @gray-divider;
     
   }//ul 
 
+}
+
+
+
+//Community ==================================================================
+
+.user{
+//  background: red;
+  margin: 20px 0;
+  &:last-child{
+    margin-bottom: 0;
+    .media-body{
+    padding: 0;
+    border: none;
+    }
+  }
+  
+  .media-body{
+    border-bottom: 1px solid @gray-divider;  
+    padding-bottom: 9px;
+  }
+  .user-info{
+    float: right;
+    a{display: block;}
+  }
+  
+  .location{
+    margin-bottom: 10px;
+  }
 }
 
 //Footer ==================================================================
@@ -599,8 +641,6 @@ footer{
   background: darken(@primary-color-dark, 10%);
   padding: 60px 0;
 }
-
-
 
 
 //Animation ==================================================================

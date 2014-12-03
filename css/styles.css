@@ -6583,11 +6583,11 @@ footer {
 }
 @media (min-width: 992px) {
   .homepage section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 }
 .section-header {
-  font-weight: 300;
+  color: #455a64;
   margin-bottom: 20px;
   margin-top: 0;
 }
@@ -6657,6 +6657,12 @@ footer {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   text-transform: none;
+  display: none;
+}
+@media (min-width: 992px) {
+  .main-banner h2 small {
+    display: inline;
+  }
 }
 .main-banner p {
   font-size: 18px;
@@ -6768,14 +6774,18 @@ footer {
   margin-bottom: 5px;
 }
 .feature {
-  margin-bottom: 80px;
+  margin: 0 0 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 .feature .large-icon {
   font-size: 800%;
-  color: #455a64;
 }
 .feature h3 {
   margin-top: 0;
+}
+.feature:last-child {
+  border: none;
 }
 .docs .col-md-6 {
   margin-bottom: 30px;
@@ -6798,11 +6808,12 @@ article h4 {
     position: -ms-sticky;
     position: -o-sticky;
     position: sticky;
-    top: 130px;
+    top: 120px;
   }
 }
 .submenu {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
+  height: 100%;
 }
 .submenu h5 {
   text-transform: uppercase;
@@ -6821,12 +6832,12 @@ article h4 {
 }
 .submenu ul a {
   display: block;
-  padding: 5px 0;
+  padding: 5px 0 5px 8px;
   border-right: 2px solid #fff;
 }
 .submenu ul li.active > a {
-  border-right: 2px solid #b0bec5;
-  color: #b0bec5;
+  border-right: 2px solid #607d8b;
+  background: #eeeeee;
 }
 .submenu ul .menu-title > a {
   font-weight: 600;
@@ -6834,6 +6845,29 @@ article h4 {
 }
 .submenu ul ul {
   padding-left: 10px;
+}
+.user {
+  margin: 20px 0;
+}
+.user:last-child {
+  margin-bottom: 0;
+}
+.user:last-child .media-body {
+  padding: 0;
+  border: none;
+}
+.user .media-body {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 9px;
+}
+.user .user-info {
+  float: right;
+}
+.user .user-info a {
+  display: block;
+}
+.user .location {
+  margin-bottom: 10px;
 }
 footer {
   background: #455a64;
