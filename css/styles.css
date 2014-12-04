@@ -6600,6 +6600,9 @@ footer {
 .section-inverse .section-header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
+.sub-section-header {
+  margin-bottom: 20px;
+}
 .navbar {
   border: none;
 }
@@ -6773,10 +6776,11 @@ footer {
 .custommers img {
   margin-bottom: 5px;
 }
+.whatsnew {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
 .feature {
   margin: 0 0 30px 0;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 .feature .large-icon {
   font-size: 800%;
@@ -6856,6 +6860,9 @@ article h4 {
   padding: 0;
   border: none;
 }
+.user img {
+  border-radius: 50%;
+}
 .user .media-body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   padding-bottom: 9px;
@@ -6867,6 +6874,44 @@ article h4 {
   display: block;
 }
 .user .location {
+  margin-bottom: 10px;
+}
+.contributor-feed img {
+  border-radius: 50%;
+}
+.contributor-feed .media {
+  margin-top: 10px;
+}
+.contributor-feed .media:last-child > .media-body {
+  border: none;
+}
+.contributor-feed .media-body {
+  width: 100%;
+  padding: 5px 0 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.contributor-feed h5,
+.contributor-feed p {
+  line-height: 20px;
+  margin: 0;
+}
+.contributor-update {
+  text-align: right;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 300;
+  white-space: nowrap;
+  float: right;
+}
+.article .article-title,
+.article .article-subtitle,
+.article .article-date {
+  margin: 0 0 3px 0;
+}
+.article .article-date {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 300;
+}
+.article .article-header {
   margin-bottom: 10px;
 }
 footer {

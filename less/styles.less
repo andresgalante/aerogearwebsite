@@ -217,6 +217,9 @@ footer{
   .section-header{  border-bottom: 1px solid @white-divider;}
 }
 
+.sub-section-header{
+  margin-bottom: 20px;
+}
 
 //NavBar ==================================================================
 
@@ -486,6 +489,12 @@ footer{
   }
 }
 
+//custommers ==================================================================
+
+.whatsnew{
+    border-top: 1px solid @gray-divider;
+}
+
 
 
 //features ==================================================================
@@ -501,8 +510,8 @@ footer{
   }
 //  background: red;
   margin: 0 0 30px 0;
-  padding-bottom: 30px;
-  border-bottom: 1px solid @gray-divider;
+//  padding-bottom: 30px;
+//  border-bottom: 1px solid @gray-divider;
   &:last-child{border: none;}
   
 }
@@ -601,6 +610,9 @@ height: 100%;
     }
   }
   
+  img{
+    .img-circle;
+  }
   .media-body{
     border-bottom: 1px solid @gray-divider;  
     padding-bottom: 9px;
@@ -614,6 +626,59 @@ height: 100%;
     margin-bottom: 10px;
   }
 }
+
+
+
+.contributor-feed{
+  img{
+    .img-circle;
+  }
+  
+  .media{
+    margin-top: 10px;
+    &:last-child>.media-body{border:none;}
+  }
+  
+  .media-body{
+    width: 100%;
+    padding: 5px 0 15px 0;
+//    height: 60px;
+    border-bottom: 1px solid @gray-divider;
+  }
+  h5,p{
+//    margin: 0 0 5px 0;
+    line-height: 20px;
+    margin: 0;
+  }
+}//contributor-feed
+
+.contributor-update{
+  text-align: right;
+  .alt;
+  white-space: nowrap;
+  float: right;
+}
+
+
+
+//News ==================================================================
+
+
+.article{
+//  background: red;
+  .article-title,
+  .article-subtitle,
+  .article-date{
+    margin: 0 0 3px 0;
+  }
+  .article-date{
+    .alt;
+  }
+  .article-header{
+    margin-bottom: 10px;
+  }
+}
+
 
 //Footer ==================================================================
 

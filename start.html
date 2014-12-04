@@ -51,6 +51,7 @@
             </li>
             
             <li><a href="community.html">Community</a></li>
+            <li><a href="news.html">News</a></li>
             
           </ul>
 
@@ -109,9 +110,42 @@
           <div class="col-md-9">
             
             <article id="overview">
-             <h1 class="section-header">Overview</h1>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <h1 class="section-header">Getting Started</h1>
+             <p>Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable.</p>
+
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+        
             </article><!-- overview -->
 
    <!-- ==================================================================================================== -->
@@ -125,6 +159,41 @@
           
              
              <h4><i class="fa fa-rocket"></i> AeroGear Android</h4>
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
+             
+             
              <p>
               <button class="btn btn-primary  btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.4.0</button>
              </p>
@@ -161,6 +230,40 @@ dependencies {
 
  
              <h4><i class="fa fa-paper-plane"></i> AeroGear Android Push</h4>
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.0.0</button>
              </p>
@@ -195,6 +298,40 @@ dependencies {
 <!-- ====================================================== -->
 
              <h4><i class="fa fa-shield"></i> AeroGear Android OTP</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.0.0</button>
              </p>
@@ -241,6 +378,40 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-rocket"></i> Aerogear iOS HTTP</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
              </p>
@@ -255,6 +426,40 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-shield"></i> Aerogear iOS oauth2</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
              </p>
@@ -269,6 +474,41 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> Aerogear iOS Push</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0</button>
              </p>
@@ -283,6 +523,41 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> Aerogear iOS Push</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0</button>
              </p>
@@ -297,6 +572,41 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-rocket"></i> Aerogear iOS httpstub</h4>
+             
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
              </p>
@@ -321,6 +631,40 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> AeroGear Push Plugin</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download the latest Push Plugin</button>
              </p>
@@ -336,6 +680,40 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-rocket"></i> AeroGear OTP Plugin</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download 0.0.1 OTP plugin</button>
              </p>
@@ -349,6 +727,40 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-shield"></i> AeroGear Crypto Plugin</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download 0.0.1 Crypto plugin</button>
              </p>
@@ -373,6 +785,40 @@ dependencies {
              <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> AeroGear Push Plugin</h4>
+             
+             <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
+
+             <p>For example:</p>
+            
+<pre>
+@base: #f938ab;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+</pre>
+
+              <p>compiles to</p>
+<pre>          
+.box {
+  color: #fe33ac;
+  border-color: #fdcdea;
+}
+.box div {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+</pre>
+             
              <p>
               <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0.0</button>
              </p>
@@ -385,9 +831,6 @@ dependencies {
              </p>
 
             </article><!-- cordova -->
-
-
-
 
 
 
