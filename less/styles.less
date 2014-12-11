@@ -1,4 +1,4 @@
-/*!
+/* 
  * Based on Bootstrap v3.3.1 
  */
 
@@ -7,22 +7,43 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 
 // Font
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,300,400);
 @font-family-sans-serif: 'Open Sans', sans-serif;
+
+// @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);
+// @font-family-sans-serif: 'Roboto', sans-serif;
+
 
 @font-weight-light: 300;
 @font-weight-regular: 400;
 @font-weight-bold: 600;
-@font-weight-xbold: 800;
+@font-weight-xbold: 700;
 
 
-@primary-color:                 #607D8B;//500
-@primary-color-dark:            #455A64;//700
-@primary-color-light:           #B0BEC5;//100
-@accent-color:                  @primary-color-light;
+@primary-color:                 #4296B4;//500
+@primary-color-dark:            #2E6980;//700
+@primary-color-light:           #A7C9D9;//100
+@accent-color:                  #FFF266;
+// @accent-color:                  #FFBB33;
+// @accent-color:                  #FFD026;
+// @accent-color:                  #FFBB00;
+// @accent-color:                  #FFE900;
+// @accent-color:                  #FFF699;
+
+// @accent-color:                  #EB6852;
+// @accent-color:                  #F89883;
+// @accent-color:                  #FFC4B6;
+
+
+
+
+
+
+//@accent-color-light:            #F2FF80;
+
 
 @gray-divider:                  rgba(0,0,0,.12);//12
-@gray-subtitle:                 rgba(0,0,0,.45);//54
+@gray-subtitle:                 rgba(0,0,0,.54);//54
 @gray-text:                     rgba(0,0,0,.75);//87
 
 @white-divider:                 rgba(255,255,255,.12);
@@ -81,6 +102,17 @@
 @btn-inverse-border:             @white-subtitle;
 
 
+@btn-accent-color:              @accent-color;
+@btn-accent-bg:                 transparent;
+@btn-accent-border:             @accent-color;
+
+
+
+@btn-accent-inverse-color:              @primary-color-dark;
+@btn-accent-inverse-bg:                 @accent-color;
+@btn-accent-inverse-border:             @accent-color;
+
+
 .btn-inverse {
   .button-variant(@btn-inverse-color; @btn-inverse-bg; @btn-inverse-border);
   &:hover{
@@ -91,6 +123,24 @@
 
 
 
+.btn-accent-inverse {
+  .button-variant(@btn-accent-inverse-color; @btn-accent-inverse-bg; @btn-accent-inverse-border);
+  &:hover{
+    background-color: transparent;
+    color: @btn-accent-inverse-bg;
+  }
+}
+
+
+.btn-accent {
+  .button-variant(@btn-accent-color; @btn-accent-bg; @btn-accent-border);
+  &:hover{
+    background-color: @btn-accent-color;
+    color: @primary-color-dark;
+  }
+}
+
+
 .btn-core {
   .button-variant(@btn-core-color; @btn-core-bg; @btn-core-border);
   &:hover{
@@ -98,6 +148,8 @@
     color: #fff;
   }
 }
+
+
 
 .btn-push {
   .button-variant(@btn-push-color; @btn-push-bg; @btn-push-border);
@@ -131,6 +183,15 @@
 }
 
 
+//Jboss dropup ==================================================================
+
+.dropup{
+  position: fixed!important;
+  top: 0px;
+  right: 0;
+  z-index: @zindex-modal!important;
+  background: red;
+}
 
 //helpers ==================================================================
 .reset{
@@ -138,7 +199,7 @@
   padding: 0;
 }
 
-.sticky{
+.pisition-sticky{
     position: -webkit-sticky;
     position: -moz-sticky;
     position: -ms-sticky;
@@ -159,15 +220,15 @@ body{
 
 //animates links
 a,button{
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
   &:hover{
-    -webkit-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    transition: all .3s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
   }//hover
 }//a
 
@@ -204,8 +265,8 @@ footer{
 .section-header{
 //  text-transform: uppercase;
 //  font-weight: @font-weight-bold;
- // border-bottom: 1px solid @gray-divider;
-  color: @primary-color-dark;
+// border-bottom: 1px solid @gray-divider;
+//  color: @primary-color-dark;
   margin-bottom: 20px;
 //  padding-bottom: 5px;
   margin-top: 0;
@@ -258,30 +319,48 @@ footer{
 //  box-shadow: 0 0 4px rgba(0,0,0,.3);
 
   .nav>li>a:hover{
-    box-shadow: inset 0 4px 0px @white-divider;
+    box-shadow: inset 0 4px 0px @primary-color-light;
     }
 
   .active{
-    box-shadow: inset 0 4px 0px @accent-color;
+    box-shadow: inset 0 4px 0px @accent-color!important;
     }
 }
 
 
 .navbar-brand {
-  font-size: @font-size-base;
-  font-weight: @font-weight-bold;         
-  i{
-    visibility: hidden;
-    color:  @primary-color-light;
-  }
+//  font-size: @font-size-base;
+//  font-weight: @font-weight-bold; 
+
+  background-image: url(../imgs/logo.png);
+  background-repeat: no-repeat;
+  background-position: @grid-gutter-width/2 top;
+  background-size:  112px 70px;
+  .size(@grid-gutter-width/2+112px,35px);
+  margin: 7px @grid-gutter-width/2 0 0;
+  text-indent: -99999px;
+    -webkit-transition: none;
+    -moz-transition:  none;
+    -o-transition:  none;
+    transition:  none;
+         
+//  i{
+//    visibility: hidden;
+//    color:  @primary-color-light;
+//  }
   
   &:hover{
-    color: #fff;
-    text-decoration: none;
+//    color: #fff;
+//    text-decoration: none;
+    background-position: @grid-gutter-width/2 bottom;
+    -webkit-transition: none;
+    -moz-transition:  none;
+    -o-transition:  none;
+    transition:  none;
 
-    i{
-      visibility: visible;
-    }//i
+//    i{
+//      visibility: visible;
+//    }//i
   }//hover
 
 }
@@ -295,15 +374,25 @@ footer{
   #gradient > .vertical(@primary-color-dark; @primary-color);
   color: #fff;
   position: relative;
-  .homepage &{
-    text-align: center;
-  }
+  
+ .homepage &:before{
+   background: url(../imgs/bg_header.png) no-repeat center center;
+   background-size: cover;
+   content:".";
+   text-indent: -9999999px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   
+ }
   
 
   img{
-    width: 100px;  
+    width: 100%;
+    .hidden-xs
   } 
-
 
   .bg{
     background-image: url(../imgs/bg_header.png);
@@ -312,13 +401,26 @@ footer{
     background-size: cover;
   }
    
-  h2{
-    margin: 0;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-size: floor((@font-size-base * 3));
+  h1{
+    line-height:  @line-height-large;
+    font-weight: @font-weight-regular!important;
+    font-size: floor((@font-size-base * 2));
+    @media (min-width: @screen-sm-min) {
+      font-size: floor((@font-size-base * 2.6));
+    }
+    @media (min-width: @screen-md-min) {
+      font-size: floor((@font-size-base * 3.5));
+    }
+
+  } 
+  
+  h2,h1{
+    text-shadow: 0 1px 2px @gray-subtitle;
+    margin-top: 0;
+//    margin-bottom: 20px;
     font-weight: @font-weight-bold;
-   
+    color: @accent-color;
+//      font-size: floor((@font-size-base * 2));
    
     small{
       font-weight: @font-weight-light;
@@ -336,9 +438,6 @@ footer{
     font-size: @font-size-large;
     line-height: 1.8;
     margin-bottom: 20px;
-    .homepage &{
-      padding: 0 100px;
-      }
     }
     
   .see-more{
@@ -349,22 +448,23 @@ footer{
     left: 0;
     right: 0;
     display: block;
+    .hidden-xs;
   } 
   
   .main-action{
 //    background: red;
-    margin-top: 30px;
+//    margin-top: 30px;
     p{
       font-size: (@font-size-base * .85);
       margin: 5px 0 0 0;
     }
+    .btn{
+      font-size: (@font-size-base * 1.6);
+      box-shadow: 0 1px 2px @gray-subtitle;
+//      font-weight: @font-weight-regular;
+    }
   }
 
-  button{
-//      box-shadow: 0 2px 3px rgba(0,0,0,.2);
-  border: 1px solid @primary-color-light;
-  background: transparent;
-  }
   
 }
 
@@ -379,7 +479,8 @@ footer{
   z-index: @zindex-sub-navbar;
   box-shadow: 0 2px 2px rgba(0,0,0,.2);
   padding: 6px 0!important;
-  .sticky;
+  width: 100%;
+  .pisition-sticky;
   top: 50px;
 
   form{
@@ -404,17 +505,24 @@ footer{
   }//a
 }//aditional-actions
 
+.aditional-actions.affix-bottom{
+  top: 50px!important;
+  position: fixed!important;
+}
+
 
 //main-features ==================================================================
 
 .main-features{
 //   border-bottom: 1px solid @gray-divider; 
+//background: red;
+padding-bottom: 30px!important;
     
   .row>.col-md-6{
     margin-bottom: 30px;
   }
     h3{
-      color: @primary-color-dark;
+//      color: @primary-color-dark;
       font-weight: @font-weight-light;
       strong{
         font-weight: @font-weight-bold;
@@ -535,19 +643,28 @@ article{
   h4{
     margin: 30px 0 20px 0;
   }
+  
 }
 
 .sidebar{
+//right: 0;
   @media (min-width: @screen-md-min) {
-    .sticky;
-    top: 120px;
+//    .pisition-sticky;
+//    top: 0px;
     }
 }
+
+.submenu.affix{
+  top: 120px!important;
+  position: fixed!important;
+//  background: red!important;
+}
+
 
 .submenu{
 border-right: 1px solid @gray-divider;
 //  background: red;
-height: 100%;
+// height: 100%;
 //main titles
   h5{
     text-transform: uppercase;
@@ -555,6 +672,7 @@ height: 100%;
     a{
 //      color: @primary-color-light;
       display: block;
+      padding-left: 10px;
     } //a
     &.active a{
      font-weight: @font-weight-bold;
@@ -565,12 +683,13 @@ height: 100%;
   ul{
     .reset;
     list-style: none;
-    
-    
+    padding-left: 10px;
+//    background: red;
     a{
       display: block;
-      padding: 5px 0 5px 8px;
+      padding: 5px 0 5px 8px ;
       border-right: 2px solid #fff;
+//      margin-left: -10px;
     }
     
     li{
@@ -588,7 +707,11 @@ height: 100%;
     }
     
     ul{
-      padding-left: 10px;
+//      padding-left: 10px;
+      margin-left: -10px;
+      a{
+        padding-left: 20px;
+      }
     }
     
   }//ul 
@@ -632,6 +755,7 @@ height: 100%;
 .contributor-feed{
   img{
     .img-circle;
+    display: block;
   }
   
   .media{
@@ -665,11 +789,22 @@ height: 100%;
 
 
 .article{
-//  background: red;
+//  background: orange;
+  position: relative;
+  border-bottom: 1px solid @gray-divider;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  .homepage &, &:last-child{border: none; padding-bottom: 0; margin-bottom: 0;}
   .article-title,
   .article-subtitle,
   .article-date{
     margin: 0 0 3px 0;
+  }
+  .article-twiter{
+//    line-height: 1.5;
+//    font-weight: @font-weight-regular;
+    font-size: @font-size-h4;
+    margin: 0;
   }
   .article-date{
     .alt;
@@ -677,6 +812,19 @@ height: 100%;
   .article-header{
     margin-bottom: 10px;
   }
+  .article-icon{
+    background: @primary-color;
+    color: @primary-color-light;
+    top: 0;
+    left: -50px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: none;
+  }
+  
 }
 
 
@@ -848,5 +996,420 @@ footer{
   }
   
 }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------ Red Hat Tab & "A JBoss Project" label - Necessary for every JBoss project regardless of hosting location ------------------------- */
+.dropup {
+  /* --- This is the standard RH tab that overlaps what's below it (project banner or navigation bar) --- */
+  /* display: none;  HIDE IT UNTIL WORKING */
+  height: 37px;
+  background-image: url("http://static.jboss.org/common/images/tabzilla/tabzilla-redhat-logo-sprite.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  width: 250px;
+  background-color: transparent;
+  position: absolute;
+  right: 40px;
+  margin-bottom: -40px;
+  z-index: 999;
+  text-align: center;
+  margin-top: -1px !important;
+}
+/* -- These styles come into play when subprojects is marked as "true" on "_layouts/subproject.html.haml"  --- */
+#subproject .navbar {
+  margin-top: 40px;
+}
+#subproject #navbar-fixed {
+  margin-top: 0px;
+}
+
+/* -- id changed to class for stickynav ---- */
+
+#subproject .navbar-fixed {
+  margin-top: 0px;
+}
+
+/* -- id changed to class for stickynav ---- */
+
+#subproject .navbar-inverse {
+  margin-top: 0px;
+}
+/* --- end of subproject styles --- */
+#tabnav-panel {
+  background-color: transparent;
+}
+#tabnav-panel li {
+  list-style: none;
+}
+#tabnav-panel .middlewarelogo {
+  border-right: 1px solid #d5d5d5;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 35px 20px 0;
+}
+#tabnav {
+  background-color: #FFF;
+  margin: 0px auto;
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+  font-size: 13.5px;
+  height: 100%;
+  text-align: left;
+}
+#tabnav .tabcontent {
+  padding-top: 30px;
+  background: linear-gradient(to bottom, #e1eef4 0%, #ffffff 60%) no-repeat scroll 0 0 transparent;
+  height: 100%;
+  clear: both;
+  padding: 20px 25px;
+}
+#tabnav .tabcontent .overview {
+  padding-bottom: 30px;
+  font-size: 15px;
+}
+#tabnav .span6 {
+  padding: 20px 10px 0 10px;
+}
+#tabnav ul {
+  padding: 0px;  /* added this to fix issue in Magnolia from styles.css */
+}
+#tabnav ul li {
+  color: #656565;
+  line-height: 23px;
+  list-style: none;
+  padding: 0px;
+}
+#tabnav ul li a {
+  text-decoration: none;
+  text-shadow: 0 1px 1px #e4eaf1;
+}
+#tabnav ul li a:hover {
+  text-shadow: 1px 1px 1px #e4eaf1;
+  text-decoration: none;
+}
+/* (I renamed all tabzilla to tabnav here...) */
+#tabnav-panel.tabnav-opened {
+  height: 240px;
+  border-bottom: 1px solid #d5d5d5;
+}
+#tabnav-panel {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  height: 0;
+  line-height: 1.3;
+  overflow: hidden;
+  position: relative;
+}
+#tabnav-contents {
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  text-align: left;
+}
+* html #tabnav-contents {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html #tabnav-contents {
+  zoom: 1;
+}
+/* IE7 */
+#tabnav-contents:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+#tabnav-promo .snippet h4,
+#tabnav-panel #tabnav-nav,
+#tabnav-panel #tabnav-nav h2 {
+  color: #484848;
+  font-family: 'Helvetica Neue', Helvetica, Verdana, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+#tabnav-panel #tabnav-nav ul {
+  margin: 0;
+  padding: 0;
+}
+#tabnav-panel #tabnav-nav h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 20px 0.4em;
+  white-space: nowrap;
+}
+#tabnav-panel #tabnav-nav ul li ul li {
+  border-right: 0 none;
+  float: none;
+  height: auto;
+  margin: 0;
+}
+#tabnav-panel #tabnav-nav a {
+  color: #484848;
+  display: block;
+  outline: 0 none;
+  padding: 0.1em 8px 0.2em 20px;
+}
+#tabnav ul li#tabnav-search {
+  border-right: 0 none;
+}
+#tabnav #tabnav-search ul li {
+  background: none repeat scroll 0 0 transparent;
+  border-right: 1px dotted #D6D6D6;
+  display: inline;
+  float: left;
+  height: 95px;
+  line-height: 1.1;
+  list-style-type: none;
+  margin: 20px 0 0;
+  padding: 0;
+  width: 16.5%;
+}
+#tabnav ul li#tabnav-search a {
+  padding-top: 0;
+}
+#tabnav ul li#tabnav-search form {
+  margin: 0.4em 10px;
+}
+#tabnav ul li#tabnav-search input:-moz-placeholder {
+  color: #173444;
+}
+/* --- The "A JBoss Project box --- */
+#ajbossproject {
+  margin-top: 8px;
+  width: 130px;
+  height: 20px;
+  background-color: rgba(66, 66, 66, 0.75);
+  filter: alpha(opacity=75);
+  /* For IE8 and earlier */
+  color: #e6e7e8;
+  -moz-border-radius: 2px;
+  /* firefox */
+  -webkit-border-radius: 2px;
+  /* safari/chrome */
+  border-radius: 2px;
+  /* CSS3, works in IE9 */
+}
+/* =Dropup Tab */
+#tab.tabnav-opened:after {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#tab:after {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  order-radius: 8px;
+  background: url("http://static.jboss.org/common/images/arrow-tabnav-down.png") repeat scroll 0 0 transparent;
+  content: "x";
+  height: 15px;
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  width: 13px;
+}
+#tab.tabnav-opened, .darkbg #tab.tabnav-opened {
+  background-position: 0 -47px;
+}
+#tab {
+  /*background: url(../../images/common/tabnav-search.png) repeat scroll 0 0 transparent;  */
+  display: block;
+  float: right;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -2000px;
+  width: 100px;
+  z-index: 999;
+  top: 0px;
+  right: 4px;
+}
+
+
+/* --- Resolution width adjustments ---*/
+@media (min-width: 1200px) {
+  #tabnav-panel {
+    width: 1230px;
+    margin: 0 auto;
+  }
+  #tabnav-panel.fullwidth {
+    width: 100%;
+  }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+  #tabnav-panel {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  #tabnav-panel.fullwidth {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  #tabnav-panel {
+    width: 784px;
+    margin: 0 auto;
+  }
+  #tabnav-panel.fullwidth {
+    width: 100%;
+  }
+}
+
+@media (max-width: 979px) {
+  #tabnav-panel {
+    max-width: 767px;
+    margin: 0 auto;
+  }
+  #tabnav-panel.fullwidth {
+    width: 100%;
+  }
+  #tabnav-panel .middlewarelogo {
+    border-right: 0px;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 15px;
+  }
+  #tabnav-panel.tabnav-opened {
+    height: 370px;
+  }
+  .dropup {
+    height: 37px;
+    background-image: url("http://static.jboss.org/common/images/tabzilla/tabzilla-redhat-logo-sprite.png");
+    background-position: left bottom;
+    width: 74px;
+    right: 30px;
+  }
+  /* ---- Hides "A JBoss Project" box on mobile devices ---- */
+  #ajbossproject {
+    display: none;
+  }
+}
+/* ---- End Red Hat tab and "A JBoss project" box ---- */
+@media (max-width: 768px) {
+  .dropup {
+    right: 60px;
+  }
+
+}
+
+
+
+/* ---- Magnolia-specific overwrite ---- */
+#project #tabnav-panel.tabnav-opened {
+  border-bottom: 0px;
+}
+
+/* ------------------- Styles that Need to apply to any framework!  ------------------ */
+a:hover, a:active, a, object, embed, *:focus {
+    outline: medium none !important;
+}
+img {
+//    border: 0 none;
+//    height: auto;
+//    max-width: 100%;
+//    vertical-align: middle;
+}
+#tab {
+  background: none;
+}
+#tabnav ul li {
+  width: 100%;
+}
+#tabnav{
+  font-weight: normal;
+}
+#tabnav ul li a {
+    color: #336699;
+    text-decoration: none;
+}
+#tabnav ul li a:hover {
+    color: #A5AA4D;
+    text-decoration: none;
+}
+
+/***** Bootstrap Styles ******/
+.row-fluid .span4 {
+    width: 31.6239%;
+}
+.row-fluid [class*="span"] {
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    display: block;
+    float: left;
+    margin-left: 2.5641%;
+    min-height: 30px;
+    /*width: 100%;*/
+}
+
+.row-fluid:before, .row-fluid:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.row-fluid:after {
+    clear: both;
+}
+.row-fluid {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+  [class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"] {
+    box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+
+
+
 
 

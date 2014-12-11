@@ -58,7 +58,18 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav> 
-        
+
+
+<div class="dropup">
+  <div id="ajbossproject">A JBoss Project</div> <a class="tabnav-closed" href="#" id="tab">Red Hat</a>
+    <script>
+      window.addEventListener('load', function() {
+        renderTabzilla("Aerogear", "aerogear.org", true );
+      }, false);
+    </script>
+</div>
+
+
 
     <section class="main-banner">
       <div class="container">
@@ -223,7 +234,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-sm-3">
             <h5>Features</h5>
             <ul class="list-unstyled">
              <li><a href="#">AeroGear Core</a></li>
@@ -233,7 +244,7 @@
             </ul>
           </div><!-- col -->
           
-          <div class="col-md-3">
+          <div class="col-sm-3">
             <h5>DOCUMENTATIONS</h5>
             <ul class="list-unstyled">
               <li><a href="#">Server</a></li>
@@ -243,7 +254,7 @@
             </ul>
           </div><!-- col -->
           
-          <div class="col-md-3">
+          <div class="col-sm-3">
             <h5>COMMUNITY</h5>
             <ul class="list-unstyled">
               <li><a href="#">About Aerogear</a></li>
@@ -255,7 +266,7 @@
           </div><!-- col -->
           
           
-          <div class="col-md-3">
+          <div class="col-sm-3">
             <h5>FOLLOW US</h5>
             <ul class="list-unstyled">
              <li><a href="#"><i class="fa fa-twitter-square"></i> Twitter</a></li>
@@ -293,8 +304,14 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
+  <!-- position sticky fix -->
+  <script src="bower_components/sticky/jquery.sticky.js"></script>
+
   <!-- My script -->
   <script src="js/script.js"></script>
+  
+  <!-- Jbosss dropout -->  
+  <script src="http://static.jboss.org/js/_jbossorg-tabzilla.js"></script>
 
 
 	
