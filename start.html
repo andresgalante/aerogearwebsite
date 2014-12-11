@@ -107,11 +107,33 @@
           
             <div class="submenu">
             
-            <h5 class="active"><a href="#">Overview</a></h5>
-            <h5><a href="#">AeroGear Android</a></h5>
-            <h5><a href="#">AeroGear iOS </a></h5>
-            <h5><a href="#">AeroGear Cardova</a></h5>
-            <h5><a href="#">AeroGear Web/Js</a></h5>
+ 
+              <ul>
+                <li class="menu-title">
+                  <a href="#">Overview</a>                  
+                </li>
+                
+                <li class="menu-title active">
+                  <a href="#">AeroGear Android</a>
+                  <ul>
+                     <li><a href="#">AeroGear Android</a></li>
+                     <li class="active"><a href="#">AeroGear Android Push</a></li>
+                     <li><a href="#">AeroGear Android OTP</a></li>
+                  </ul>
+                </li>
+     
+                <li class="menu-title">
+                  <a href="#">AeroGear iOS</a>                  
+                </li>
+
+                <li class="menu-title">
+                  <a href="#">AeroGear Cardova</a>                  
+                </li>
+
+                <li class="menu-title">
+                  <a href="#">AeroGear Web/Js</a>                  
+                </li>                                
+              </ul> 
  
             </div><!-- submenu -->
             
@@ -121,7 +143,7 @@
           <div class="col-md-9">
             
             <article id="overview">
-             <h1 class="section-header">Getting Started</h1>
+             <h2 class="section-header">Getting Started</h2>
              <p>Less is a CSS pre-processor, meaning that it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make CSS that is more maintainable, themable and extendable.</p>
 
              <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
@@ -161,12 +183,12 @@
 
    <!-- ==================================================================================================== -->
             <article id="android">
-             <h1 class="section-header"><i class="fa fa-android"></i> AeroGear Android</h1>
+             <h2 class="section-header"><i class="fa fa-android"></i> AeroGear Android</h2>
              <p>AeroGear on Android simplifies developing mobile applications which connect to remote services. We support all versions of Android above 2.3.3 (and 2.3.3 if you include the support-library). Aerogear Android is published in Maven Central and available as library project on Github.</p>
              <p>All of the features of AeroGear are supported including DataStores, Pipes, Authentication, Authorization, and Pagination. We also supply APIs for offloading the work done by Pipes to the Loader API; your Activities will crash less and use less bandwidth.</p>
              <p>If you have any questions, feel free to hit us up on the mailing list or on irc.</p>
              
-   <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
           
              
              <h4><i class="fa fa-rocket"></i> AeroGear Android</h4>
@@ -206,7 +228,7 @@
              
              
              <p>
-              <button class="btn btn-primary  btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.4.0</button>
+              <button class="btn btn-primary-inverse  btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.4.0</button>
              </p>
              <h5>If you are using Maven:</h5>
              
@@ -237,7 +259,7 @@ dependencies {
                   
  
  
- <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
 
  
              <h4><i class="fa fa-paper-plane"></i> AeroGear Android Push</h4>
@@ -276,7 +298,7 @@ dependencies {
              
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.0.0</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.0.0</button>
              </p>
              <h5>If you are using Maven:</h5>
              
@@ -306,7 +328,7 @@ dependencies {
               <button class="btn btn-primary"><i class="fa fa-book"></i> Guides! Learn more</button> 
              </p>
 
-<!-- ====================================================== -->
+<hr> <!-- ====================================================== -->
 
              <h4><i class="fa fa-shield"></i> AeroGear Android OTP</h4>
              
@@ -344,7 +366,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.0.0</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download Now v1.0.0</button>
              </p>
              <h5>If you are using Maven:</h5>
              
@@ -378,7 +400,7 @@ dependencies {
 
    <!-- ==================================================================================================== -->
             <article id="ios">
-             <h1 class="section-header"><i class="fa fa-apple"></i> AeroGear iOS</h1>
+             <h2 class="section-header"><i class="fa fa-apple"></i> AeroGear iOS</h2>
              <p>The aim of the project is to provide a set of convenient and modular Swift based iOS libraries, ranging from networking, authorization (and in particular OAuth2) , Storage and Crypto. We believe the iOS platform offers a solid and extremely powerful foundation, but there are cases in which developer productivity can be improved by offering a much easier access to that foundation. Please use the corresponding links below for more information of the features provided by each respective library.</p>
 
              <p>If you have any questions, feel free to hit us up on the mailing list or on irc.</p>
@@ -386,7 +408,7 @@ dependencies {
              <div class="alert alert-info" role="alert">If you are looking for AeroGear iOS 1.x series, please visit this page for more information.</div>
 
              
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-rocket"></i> Aerogear iOS HTTP</h4>
              
@@ -424,7 +446,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
              </p>
             <h5>and if you want more:</h5>
              <p>
@@ -434,7 +456,7 @@ dependencies {
              </p>
 
 
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-shield"></i> Aerogear iOS oauth2</h4>
              
@@ -472,7 +494,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
              </p>
             <h5>and if you want more:</h5>
              <p>
@@ -482,7 +504,7 @@ dependencies {
              </p>
 
 
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> Aerogear iOS Push</h4>
              
@@ -521,7 +543,7 @@ dependencies {
              
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0</button>
              </p>
             <h5>and if you want more:</h5>
              <p>
@@ -531,7 +553,7 @@ dependencies {
              </p>
 
 
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> Aerogear iOS Push</h4>
              
@@ -570,7 +592,7 @@ dependencies {
              
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0</button>
              </p>
             <h5>and if you want more:</h5>
              <p>
@@ -580,7 +602,7 @@ dependencies {
              </p>
 
 
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-rocket"></i> Aerogear iOS httpstub</h4>
              
@@ -619,7 +641,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download v0.1</button>
              </p>
             <h5>and if you want more:</h5>
              <p>
@@ -634,12 +656,12 @@ dependencies {
             
    <!-- ==================================================================================================== -->
             <article id="cordova">
-             <h1 class="section-header"><i class="fa fa-stop"></i> AeroGear Cordova</h1>
+             <h2 class="section-header"><i class="fa fa-stop"></i> AeroGear Cordova</h2>
              <p>Using the same AeroGear.js library we use for mobile web apps, we can move our app to the device and gain access to native APIs thanks to Apache Cordova. We also have some plugins that take advantage of native hardware for speed, security and push notifications.</p>
 
 
              
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> AeroGear Push Plugin</h4>
              
@@ -677,7 +699,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download the latest Push Plugin</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download the latest Push Plugin</button>
              </p>
             <h5>and if you want more information:</h5>
              <p>
@@ -688,7 +710,7 @@ dependencies {
              </p>
 
 
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-rocket"></i> AeroGear OTP Plugin</h4>
              
@@ -726,7 +748,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download 0.0.1 OTP plugin</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download 0.0.1 OTP plugin</button>
              </p>
             <h5>and if you want more information:</h5>
              <p>
@@ -735,7 +757,7 @@ dependencies {
              </p>
 
 
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-shield"></i> AeroGear Crypto Plugin</h4>
              
@@ -773,7 +795,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download 0.0.1 Crypto plugin</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download 0.0.1 Crypto plugin</button>
              </p>
             <h5>and if you want more information:</h5>
              <p>
@@ -788,12 +810,12 @@ dependencies {
 
    <!-- ==================================================================================================== -->
             <article id="webjs">
-             <h1 class="section-header"><i class="fa fa-html5"></i> AeroGear.js</h1>
+             <h2 class="section-header"><i class="fa fa-html5"></i> AeroGear.js</h2>
              <p>When building mobile web apps, it is important to have lightweight, performant code that gives a great experience to your users no matter what device they might be using. That is where AeroGear.js comes in. This library provides everything from a simple persistence layer to a security API and everything in between.</p>
 
 
              
-             <!-- ====================================================== -->
+ <hr> <!-- ====================================================== -->
              
              <h4><i class="fa fa-paper-plane"></i> AeroGear Push Plugin</h4>
              
@@ -831,7 +853,7 @@ dependencies {
 </pre>
              
              <p>
-              <button class="btn btn-primary btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0.0</button>
+              <button class="btn btn-primary-inverse btn-lg"><i class="fa fa-cloud-download"></i> Download v2.0.0</button>
              </p>
             <h5>and if you want more information:</h5>
              <p>

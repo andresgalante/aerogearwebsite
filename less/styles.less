@@ -183,6 +183,15 @@
 }
 
 
+.btn-primary-inverse {
+  .button-variant(#fff; @primary-color; @primary-color);
+  &:hover{
+    background-color: #fff;
+    color: @primary-color;
+  }
+}
+
+
 //Jboss dropup ==================================================================
 
 .dropup{
@@ -267,8 +276,7 @@ footer{
 //  font-weight: @font-weight-bold;
 // border-bottom: 1px solid @gray-divider;
 //  color: @primary-color-dark;
-  margin-bottom: 20px;
-//  padding-bottom: 5px;
+//  margin-bottom: 20px;
   margin-top: 0;
 }
 
@@ -426,7 +434,7 @@ footer{
       font-weight: @font-weight-light;
       color: @white-subtitle;
       text-transform: none;
-      display: none;
+//      display: none;
       @media (min-width: @screen-md-min) {
         display: inline;
       }
@@ -457,6 +465,7 @@ footer{
     p{
       font-size: (@font-size-base * .85);
       margin: 5px 0 0 0;
+      color: @white-subtitle;
     }
     .btn{
       font-size: (@font-size-base * 1.6);
@@ -516,10 +525,10 @@ footer{
 .main-features{
 //   border-bottom: 1px solid @gray-divider; 
 //background: red;
-padding-bottom: 30px!important;
+padding-bottom: 40px!important;
     
   .row>.col-md-6{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
     h3{
 //      color: @primary-color-dark;
@@ -609,19 +618,15 @@ padding-bottom: 30px!important;
 
 
 .feature{
-  .large-icon{
-    font-size: 800%;
-//    color: @primary-color-dark;
-  }
   h3{
     margin-top: 0;
+    font-weight: @font-weight-light;
   }
 //  background: red;
-  margin: 0 0 30px 0;
-//  padding-bottom: 30px;
-//  border-bottom: 1px solid @gray-divider;
-  &:last-child{border: none;}
-  
+  margin:  20px 0 0 0;
+  padding-top: 20px;
+  border-top: 1px solid @gray-divider;
+//  &:last-child{border: none;}  
 }
 
 //submenu ==================================================================
@@ -676,6 +681,7 @@ border-right: 1px solid @gray-divider;
     } //a
     &.active a{
      font-weight: @font-weight-bold;
+     color: @primary-color-dark;
     }
 
   }//h6
@@ -696,14 +702,14 @@ border-right: 1px solid @gray-divider;
     &.active>a{
         border-right: 2px solid @primary-color;
         background: @gray-lighter;
-//        color: @accent-color
+        color: @primary-color-dark;
       }
     }
     
     .menu-title>a{
 //      background: blue;
       font-weight: @font-weight-bold;
-      color: @primary-color-dark;
+      color: @primary-color;
     }
     
     ul{
@@ -789,12 +795,11 @@ border-right: 1px solid @gray-divider;
 
 
 .article{
-//  background: orange;
   position: relative;
-  border-bottom: 1px solid @gray-divider;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  .homepage &, &:last-child{border: none; padding-bottom: 0; margin-bottom: 0;}
+  border-top: 1px solid @gray-divider;
+  padding-top: 20px;
+  margin-top: 20px;
+  .homepage &{border: none; padding-top: 0; margin-top: 0;}
   .article-title,
   .article-subtitle,
   .article-date{
@@ -813,16 +818,22 @@ border-right: 1px solid @gray-divider;
     margin-bottom: 10px;
   }
   .article-icon{
-    background: @primary-color;
-    color: @primary-color-light;
+    background: @gray-divider;
+    color: @gray-subtitle;
     top: 0;
-    left: -50px;
+    right: 0px;
     position: absolute;
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    display: none;
+    .border-bottom-radius(@border-radius-small);
+//    display: none;
+  }
+  
+  &.twitter{
+//    background: red;
+    padding-right: 40px;
   }
   
 }

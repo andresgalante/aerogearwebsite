@@ -6636,6 +6636,55 @@ fieldset[disabled] .btn-sync.active {
   background-color: #2e6980;
   color: #fff;
 }
+.btn-primary-inverse {
+  color: #ffffff;
+  background-color: #4296b4;
+  border-color: #4296b4;
+}
+.btn-primary-inverse:hover,
+.btn-primary-inverse:focus,
+.btn-primary-inverse.focus,
+.btn-primary-inverse:active,
+.btn-primary-inverse.active,
+.open > .dropdown-toggle.btn-primary-inverse {
+  color: #ffffff;
+  background-color: #34778f;
+  border-color: #327187;
+}
+.btn-primary-inverse:active,
+.btn-primary-inverse.active,
+.open > .dropdown-toggle.btn-primary-inverse {
+  background-image: none;
+}
+.btn-primary-inverse.disabled,
+.btn-primary-inverse[disabled],
+fieldset[disabled] .btn-primary-inverse,
+.btn-primary-inverse.disabled:hover,
+.btn-primary-inverse[disabled]:hover,
+fieldset[disabled] .btn-primary-inverse:hover,
+.btn-primary-inverse.disabled:focus,
+.btn-primary-inverse[disabled]:focus,
+fieldset[disabled] .btn-primary-inverse:focus,
+.btn-primary-inverse.disabled.focus,
+.btn-primary-inverse[disabled].focus,
+fieldset[disabled] .btn-primary-inverse.focus,
+.btn-primary-inverse.disabled:active,
+.btn-primary-inverse[disabled]:active,
+fieldset[disabled] .btn-primary-inverse:active,
+.btn-primary-inverse.disabled.active,
+.btn-primary-inverse[disabled].active,
+fieldset[disabled] .btn-primary-inverse.active {
+  background-color: #4296b4;
+  border-color: #4296b4;
+}
+.btn-primary-inverse .badge {
+  color: #4296b4;
+  background-color: #ffffff;
+}
+.btn-primary-inverse:hover {
+  background-color: #fff;
+  color: #4296b4;
+}
 .dropup {
   position: fixed!important;
   top: 0px;
@@ -6692,7 +6741,6 @@ footer {
   }
 }
 .section-header {
-  margin-bottom: 20px;
   margin-top: 0;
 }
 .section-inverse {
@@ -6799,7 +6847,6 @@ footer {
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
   text-transform: none;
-  display: none;
 }
 @media (min-width: 992px) {
   .main-banner h2 small,
@@ -6829,6 +6876,7 @@ footer {
 .main-banner .main-action p {
   font-size: 11.9px;
   margin: 5px 0 0 0;
+  color: rgba(255, 255, 255, 0.7);
 }
 .main-banner .main-action .btn {
   font-size: 22.4px;
@@ -6874,10 +6922,10 @@ footer {
   position: fixed!important;
 }
 .main-features {
-  padding-bottom: 30px!important;
+  padding-bottom: 40px!important;
 }
 .main-features .row > .col-md-6 {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .main-features h3 {
   font-weight: 300;
@@ -6926,16 +6974,13 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 .feature {
-  margin: 0 0 30px 0;
-}
-.feature .large-icon {
-  font-size: 800%;
+  margin: 20px 0 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 .feature h3 {
   margin-top: 0;
-}
-.feature:last-child {
-  border: none;
+  font-weight: 300;
 }
 .docs .col-md-6 {
   margin-bottom: 30px;
@@ -6968,6 +7013,7 @@ article h4 {
 }
 .submenu h5.active a {
   font-weight: 600;
+  color: #2e6980;
 }
 .submenu ul {
   margin: 0;
@@ -6983,10 +7029,11 @@ article h4 {
 .submenu ul li.active > a {
   border-right: 2px solid #4296b4;
   background: #eeeeee;
+  color: #2e6980;
 }
 .submenu ul .menu-title > a {
   font-weight: 600;
-  color: #2e6980;
+  color: #4296b4;
 }
 .submenu ul ul {
   margin-left: -10px;
@@ -7049,15 +7096,14 @@ article h4 {
 }
 .article {
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding-top: 20px;
+  margin-top: 20px;
 }
-.homepage .article,
-.article:last-child {
+.homepage .article {
   border: none;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding-top: 0;
+  margin-top: 0;
 }
 .article .article-title,
 .article .article-subtitle,
@@ -7076,16 +7122,20 @@ article h4 {
   margin-bottom: 10px;
 }
 .article .article-icon {
-  background: #4296b4;
-  color: #a7c9d9;
+  background: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.54);
   top: 0;
-  left: -50px;
+  right: 0px;
   position: absolute;
   width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
-  display: none;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.article.twitter {
+  padding-right: 40px;
 }
 footer {
   background: #2e6980;
