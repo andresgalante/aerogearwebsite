@@ -20,24 +20,18 @@
   * AeroGear Security Crypto
   * AeroGear Cordova
 * Push Specifications
-
   * AeroGear UnifiedPush RESTful APIs - stable
   * AeroGear UnifiedPush RESTful APIs - development
   * AeroGear UnifiedPush Java Client - Version 1.0.0
   * AeroGear UnifiedPush Node.js Client
   * AeroGear SimplePush Java Client
-      
 * Sync Specifications
-
   * Data Sync Specification
     * Client API Proposals
-    * Server API Proposals
-        
+    * Server API Proposals        
 ###Guides
-  
 * Supported Platforms
   * AeroGear Browser Support Targets
-
 * Getting Started
   * FAQ
   * Get Started With AeroGear.js
@@ -51,11 +45,8 @@
   * Cordova Setup
   * Converting an AeroGear HTML5 + REST Web App to a Hybrid App with Apache Cordova
   * Tutorial: Android Development w/ PhoneGap/Apache Cordova in JBoss Developer Studio 5
-
 * User Guides
-
   * AeroGear Android User Guide
-
     * How to build AeroGear Android library
     * Usage Guides
       * Pipe
@@ -64,13 +55,11 @@
       * Authorization
       * Store
       * Push Messaging
-    
     * Example apps
       * Cookbook
       * AeroDoc
       * Crypto Demo
       * OTP Demo
-    
     * JavaDoc documentation
       * AeroGear Android 1.4.0
       * AeroGear Android Auth 2.0.0-alpha.1
@@ -79,17 +68,14 @@
       * AeroGear Android Push 2.0.0-alpha.1
       * AeroGear Android Security 2.0.0-alpha.1
       * AeroGear Android Store 2.0.0-alpha.1
-    
     * Projects using AeroGear on Android
       * call4paperz4android
       * AGReddit
       * DevNexus Android App (Google Play Link)
-    
     * Presentations about AeroGear on Android
       * AeroGear Android 1.0.0
       * AeroGear Android - The mobile developer’s utility belt
       * Let’s Build a Modern Android App
-
   * AeroGear iOS 1.X User Guide
     * Getting Started Guides
       * Get Started with iOS and Xcode
@@ -108,7 +94,6 @@
       * OTP Demo
     * API documentation
       * 1.4.0 API documentation
-
   * AeroGear iOS 2.X User Guide
     * User Guides
       * Authorization (OAuth2)
@@ -116,13 +101,10 @@
       * Cookbook
       * Backend Cookbook Shoot: OAuth2 demo with Google, Facebook and Keycloak
       * Cookbook/Buddies and Cookbook/Weather to demo http module usage  
-  
   * AeroGear Two-Factor Authentication with OTP
   * AeroGear Two-Factor Authentication with OTP as Cordova Plugin
-  
   * UnifiedPush Server
     * AeroGear UnifiedPush Server resources
-    
       * UnifiedPush Server guides
         * UnifiedPush Server User Guide
         * Push Notification Message Format
@@ -145,10 +127,7 @@
         * UnifiedPush Server: RESTful API (development)
         * UnifiedPush Java Client
         * UnifiedPush Node.js Client    
-    
-  
   * Contributing to AeroGear
-
     * Contributing to AeroGear
     * AeroGear GitHub Workflow
     * How to Handle AeroGear Pull Requests
@@ -156,9 +135,7 @@
     * AeroGear Licensing and Copyright
     * AeroGear Developer Tools Guide
     * AeroGear Versioning Policy
-
 ### Road Map
-
   * AeroGear Project Roadmap
   * Subproject Roadmaps
     * Android
@@ -170,22 +147,17 @@
     * UnifiedPush
     * WebPush
     * Web site
-
-
 ### Examples and Demos
-
 * Android
   * Cookbook
   * AeroDoc
   * Crypto Demo
   * OTP Demo
-
 * iOS
   * Cookbook
   * AeroDoc
   * Crypto Demo
   * OTP Demo
-
 * JavaScript 
   * AS QuickStart
   * Running Demo
