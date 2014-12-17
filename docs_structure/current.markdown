@@ -28,7 +28,8 @@
 * Sync Specifications
   * Data Sync Specification
     * Client API Proposals
-    * Server API Proposals        
+    * Server API Proposals
+       
 ###Guides
 * Supported Platforms
   * AeroGear Browser Support Targets
@@ -135,6 +136,7 @@
     * AeroGear Licensing and Copyright
     * AeroGear Developer Tools Guide
     * AeroGear Versioning Policy
+
 ### Road Map
   * AeroGear Project Roadmap
   * Subproject Roadmaps
@@ -147,6 +149,7 @@
     * UnifiedPush
     * WebPush
     * Web site
+    
 ### Examples and Demos
 * Android
   * Cookbook
