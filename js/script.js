@@ -79,11 +79,11 @@ jQuery(function($){
   
    $('.submenu').affix({    
        offset: {
-//        top: function (){
-//          return (this.top = $(".main-banner").outerHeight(true)+$(".aditional-actions").outerHeight(true));
-//        },
+        top: function (){
+          return (this.top = $(".main-banner").outerHeight(true)+$(".aditional-actions").outerHeight(true));
+        },
         
-        top:116,
+//        top:116,
 
         bottom: function (){
           return (this.bottom = $("footer").outerHeight(true)+$('.redhat').outerHeight(true));

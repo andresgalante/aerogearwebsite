@@ -7002,6 +7002,7 @@ article h4 {
 }
 .submenu {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 60px;
 }
 .submenu h5 {
   text-transform: uppercase;
@@ -7133,6 +7134,7 @@ article h4 {
   text-align: center;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  border-bottom: 2px solid #4296b4;
 }
 .article.twitter {
   padding-right: 40px;
