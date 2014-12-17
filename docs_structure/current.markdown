@@ -1,41 +1,37 @@
-Documentation
+# Documentation
+## API Documentation and Specifications
+* Client Library Specifications
+  * AeroGear JS 2.0.0
+  * AeroGear iOS Http v0.1
+  * AeroGear iOS Oauth2 v0.1
+  * AeroGear-Push iOS 1.0.0
+  * AeroGear-OTP iOS 1.0.0
+  * AeroGear-Crypto iOS 0.2.3
+  * AeroGear Android 1.4.0
+  * AeroGear Android Auth 2.0.0-alpha.1
+  * AeroGear Android Authz 2.0.0-alpha.1
+  * AeroGear Android Pipe 2.0.0-alpha.1
+  * AeroGear Android Push 2.0.0-alpha.1
+  * AeroGear Android Security 2.0.0-alpha.1
+  * AeroGear Android Store 2.0.0-alpha.1
+  * Pipe API
+  * Paging API
+  * Paging API usage examples
+  * AeroGear Security Crypto
+  * AeroGear Cordova
+* Push Specifications
 
-  API Documentation and Specifications
-
-    Client Library Specifications
-
-			AeroGear JS 2.0.0
-			AeroGear iOS Http v0.1
-			AeroGear iOS Oauth2 v0.1
-			AeroGear-Push iOS 1.0.0
-			AeroGear-OTP iOS 1.0.0
-			AeroGear-Crypto iOS 0.2.3
-			AeroGear Android 1.4.0
-			AeroGear Android Auth 2.0.0-alpha.1
-			AeroGear Android Authz 2.0.0-alpha.1
-      AeroGear Android Pipe 2.0.0-alpha.1
-      AeroGear Android Push 2.0.0-alpha.1
-      AeroGear Android Security 2.0.0-alpha.1
-      AeroGear Android Store 2.0.0-alpha.1
-      Pipe API
-      Paging API
-      Paging API usage examples
-      AeroGear Security Crypto
-      AeroGear Cordova
-    
-    Push Specifications
-
-      AeroGear UnifiedPush RESTful APIs - stable
-      AeroGear UnifiedPush RESTful APIs - development
-      AeroGear UnifiedPush Java Client - Version 1.0.0
-      AeroGear UnifiedPush Node.js Client
-      AeroGear SimplePush Java Client
+  * AeroGear UnifiedPush RESTful APIs - stable
+  * AeroGear UnifiedPush RESTful APIs - development
+  * AeroGear UnifiedPush Java Client - Version 1.0.0
+  * AeroGear UnifiedPush Node.js Client
+  * AeroGear SimplePush Java Client
       
-    Sync Specifications
+* Sync Specifications
 
-      Data Sync Specification
-        Client API Proposals
-        Server API Proposals
+  * Data Sync Specification
+    * Client API Proposals
+    * Server API Proposals
         
   Guides
   
