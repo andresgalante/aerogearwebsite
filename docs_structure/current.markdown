@@ -2,14 +2,14 @@ Documentation
 
   API Documentation and Specifications
 
-Client Library Specifications
+    Client Library Specifications
 
-*AeroGear JS 2.0.0
- *AeroGear iOS Http v0.1
- *AeroGear iOS Oauth2 v0.1
- *AeroGear-Push iOS 1.0.0
-  *AeroGear-OTP iOS 1.0.0
-  *AeroGear-Crypto iOS 0.2.3
+			AeroGear JS 2.0.0
+			AeroGear iOS Http v0.1
+			AeroGear iOS Oauth2 v0.1
+			AeroGear-Push iOS 1.0.0
+			AeroGear-OTP iOS 1.0.0
+			AeroGear-Crypto iOS 0.2.3
 			AeroGear Android 1.4.0
 			AeroGear Android Auth 2.0.0-alpha.1
 			AeroGear Android Authz 2.0.0-alpha.1
