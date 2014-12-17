@@ -138,17 +138,17 @@
     * AeroGear Versioning Policy
 
 ### Road Map
-  * AeroGear Project Roadmap
-  * Subproject Roadmaps
-    * Android
-    * Cordova
-    * iOS
-    * JavaScript
-    * Security
-    * SimplePush
-    * UnifiedPush
-    * WebPush
-    * Web site
+* AeroGear Project Roadmap
+* Subproject Roadmaps
+  * Android
+  * Cordova
+  * iOS
+  * JavaScript
+  * Security
+  * SimplePush
+  * UnifiedPush
+  * WebPush
+  * Web site
     
 ### Examples and Demos
 * Android
