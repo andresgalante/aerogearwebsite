@@ -42,6 +42,7 @@
     * Data Sync Specification
       * Client API Proposals
       * Server API Proposals
+      
 ### Road Map
 What are the changes here?
 * AeroGear Project Roadmap
@@ -55,6 +56,7 @@ What are the changes here?
   * UnifiedPush
   * WebPush
   * Web site
+  
 # Get started     
 ###Guides
 * AeroGear Browser Support Targets
@@ -124,7 +126,8 @@ What are the changes here?
   * Android
     * AeroGear Android 1.0.0
     * AeroGear Android - The mobile developer’s utility belt
-    * Let’s Build a Modern Android App   
+    * Let’s Build a Modern Android App
+    
 ### Examples and Demos
 * Demos apps
   * Android
@@ -148,6 +151,7 @@ What are the changes here?
     * call4paperz4android
     * AGReddit
     * DevNexus Android App (Google Play Link)
+    
 # Community
   * Contributing to AeroGear
     * Contributing to AeroGear
